@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style> /* This is called embedded CSS  */
+        th{
+            background: lightgrey;
+        }
+        table, th, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+            text-align: center;
+        }
+        tfoot{
+            text-align: center;
+        }
+    
+      </style>
+  </head>
+  
+  
+  <body>
+    <h1>Nutrition Information</h1>
+    
+    <p> At the Black Goose Bistro, we know you care about what you eat. we are happy to provide nutritional information for our most popular menu item</p>
+    <table>
+      <tr>
+        <th>Menu Items</th> <th>Calories</th> <th>Fat</th>
+      </tr>
+      
+      <tbody>
+        <tr>
+        <td>Chicken noodle soup</td> <td>120</td> <td rowspan="2">2</td>
+        </tr>
+      
+       <tr>
+        <td>Ceaser Salad</td> <td>400</td> 
+      </tr>
+
+      <tr>
+        <td>Maggi</td> <td colspan='2'>400 (Cal.)</td>
+      </tr>
+      </tbody>
+      
+      <tfoot>
+        <tr>
+            <td colspan="3">This is a footer</td>
+        </tr>
+      </tfoot>
+
+    </table>
+    
+  </body>
+</html>
