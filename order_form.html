@@ -29,6 +29,16 @@
                 margin: 20px;
                 max-width: 100px;
             }
+
+            #button-container{
+                display: flex;
+                background-color: rgb(34, 60, 68);
+                border: 1px solid black;
+                border-radius: 20px;
+                flex-direction: row;
+                margin: 8px auto;
+                max-width: 420px;
+            }
         </style>
     </head>
 
@@ -36,6 +46,7 @@
     <body>
         <center>
         <h1> Black Goose Bistro | Pizza On-Demand</h2>
+            <p style="max-width:50%;"
         <p>Our 12" wood-fired pizza are available for  delivery.
             Build your own custom pizza and we will deliver it in an hour.
         </p>
@@ -90,21 +101,41 @@
         <h4>Choose as many as you want</h4>
 
           <ul style="display: flex;flex-direction:column;">
-       <li>White Sauce<input type="radio"></li> 
-       <li>Red Sauce<input type="radio"li>
-       <li>Mozzarella Cheese<input type="radio"></li>
-       <li>Mushrooms<input type="radio" ></li>
-       <li>Peppers<input type="radio" ></li>
-       <li>Anchovies<input type="radio"></li>
+       <li>White Sauce<input type="radio" class="toppings"></li> 
+       <li>Red Sauce<input type="radio" class="toppings"></li>
+       <li>Mozzarella Cheese<input type="radio" class="toppings"></li>
+       <li>Pepperoni<input type="radio"  class="toppings"></li>
+       <li>Mushrooms<input type="radio"  class="toppings"></li>
+       <li>Peppers<input type="radio"  class="toppings"></li>
+       <li>Anchovies<input type="radio" class="toppings"></li>
 
             </ul>
 
     </fieldset>
+    <fieldset>
+        <legend>Additional Info</legend>
+        <label for="number">Number of pizzas:
+            <input type="number" name="number" max="10" />
+        </label> 
+    </fieldset>
+
+    <div id="button-container">
+        <button>Submit</button>
+        <button>Subscribe</button>
+        <button>Reset</button>
+    </div>
 
     </form>
-        </form>
+    </form>
     </body>
+    
+    <script>
+        const toppings = document.querySelectorAll(".toppings");
 
+        toppings.forEach((topping) => {
+            topping.checked = false;
+        });
+    </script>
 
 
 </html>
