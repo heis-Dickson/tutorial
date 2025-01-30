@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flexbox Example</title>
+
+        <style>
+           .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-gap: 10px;
+           }
+
+           .item1{
+            text-align: center;
+            align-content: center;
+            grid-column: span 2;
+            background: lightgreen;
+            padding: 10px;
+           }
+           
+           .item2{
+            grid-column: 1;
+            grid-row: span 3;
+            background: lightblue;
+            padding: 20px;
+           }
+
+           .item3{
+            text-align: center;
+            align-content: top;
+            grid-column: 0;
+            grid-row: span 2;
+            background: rgb(228, 248, 47);
+           }
+           
+           .item4{
+            text-align: center;
+            align-content: center;
+            grid-column: 2;
+            background: red;
+            color: white;
+           }
+
+        </style>
+    </head>
+    <body>
+
+         <div class="container">
+            <div class="item item1"><h3>Lamborghini</h3></h3></div>
+            <div class="item item2"><h4>Automobili Lamborghini S.p.A., usually referred to as Lamborghini or colloquially Lambo,
+                 is an Italian manufacturer of luxury sports cars and SUVs based in Sant'Agata Bolognese.</h4></div>
+            <div class="item item3"><video src="https://videos.pexels.com/video-files/7727416/7727416-hd_1920_1080_25fps.mp4"
+                 style="width:400px;height:300px;" 
+               controls loop></video></div>
+            <div class="item item4">This is a lamborghini Huracan</div>
+         </div>
+        </body>
+</html>
